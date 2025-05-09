@@ -1,0 +1,91 @@
+.dropdown-select {
+  --background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  // padding: 4px 16px;
+  // margin-bottom: 12px;
+  width: 80%;
+  position: relative;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.filter-button {
+  position: relative;
+}
+
+.filter-badge {
+  // position: absolute;
+  // top: -6px;
+  // right: -10px;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 50%;
+  background-color: #FD6C6C;
+  color: #ffffff;
+}
+
+ion-label {
+  font-size: 14px;
+  color: #5d5d5d !important; // or use Ionic's CSS variables like var(--ion-color-medium)
+  font-weight: 400;
+}
+
+ion-select {
+  font-size: 16px;
+  color: #454545 !important; // or use Ionic's CSS variables like var(--ion-color-medium)
+  font-weight: 500;
+}
+
+.db__header {
+  // height: 163px;
+  width: 100%;
+  padding: 50px 0 0px 28px;
+  background: #ffffff;
+  font-weight: 700;
+  font-size: 24px;
+  // line-height: 40px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.custom-select {
+  position: relative;
+
+  &::part(icon) {
+    display: none; // Hide default Ionic arrow
+  }
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 24px;
+  right: 9px;
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+  pointer-events: none;
+  margin-right: 8px;
+}
+
+.sort, .filter {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  font-size: 16px;
+
+  span {
+    color: #454545;
+    text-transform: capitalize;
+  }
+}

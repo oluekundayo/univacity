@@ -1,0 +1,15 @@
+<ion-grid>
+  <ion-row class="fee-row">
+    <ion-col size="6" size-md="4" class="fee-col" *ngFor="let fee of feed">
+      <div class="fee-box">
+        <div class="fee-icon">
+          <img src="../../../assets/feed.svg" alt="" />
+        </div>
+        <div>
+          <div class="fee-name">{{ fee.name }}</div>
+          <div class="fee-details">{{ fee.details }}</div>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>

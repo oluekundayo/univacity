@@ -1,0 +1,131 @@
+<ion-content [fullscreen]="true">
+  <div class="filter">
+    <div>
+      <div class="tuition-fee-section">
+        <h4>Tuition fee</h4>
+        <div class="range-box">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                <div class="adjust_input">
+                  <ion-label>Min</ion-label>
+                  <ion-input
+                    readonly
+                    [value]="'$'+ formatNumber(tuitionRange.lower)"
+                  ></ion-input>
+                </div>
+              </ion-col>
+              <ion-col size="6">
+                <div class="adjust_input">
+                  <ion-label>Max</ion-label>
+                  <ion-input
+                    readonly
+                    [value]="'$'+ formatNumber(tuitionRange.upper)"
+                  ></ion-input>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+          <ion-range
+            class="custom-range"
+            dualKnobs="true"
+            [min]="min"
+            [max]="max"
+            [step]="1000"
+            snaps="true"
+            [(ngModel)]="tuitionRange"
+            pin="true"
+          ></ion-range>
+
+          <div class="range-labels-container">
+            <span
+              class="range-label"
+              [style.left.%]="getPercentage(tuitionRange.lower)"
+            >
+              {{ formatK(tuitionRange.lower) }}
+            </span>
+
+            <span
+              class="range-label"
+              [style.left.%]="getPercentage(tuitionRange.upper)"
+            >
+              {{ formatK(tuitionRange.upper) }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <ion-list>
+        <ion-item button (click)="selectInstitutes(true)">
+          <ion-label>
+            <h2>Institutes</h2>
+            <p *ngIf="!selectedInstitutes.length">None selected</p>
+            <p *ngIf="selectedInstitutes.length">
+              {{ selectedInstitutes.join(', ') }}
+            </p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item disabled>
+          <ion-label>
+            <h2>Education Level</h2>
+            <p>None selected</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item disabled>
+          <ion-label>
+            <h2>Country</h2>
+            <p>United States, United Kingdom</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item disabled>
+          <ion-label>
+            <h2>Discipline</h2>
+            <p>Law, Mathematics</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item disabled>
+          <ion-label>
+            <h2>Study Language</h2>
+            <p>None selected</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item disabled>
+          <ion-label>
+            <h2>Attendance</h2>
+            <p>None selected</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <div class="institutes">
+        <div class="filter_header">
+          <div class="back" (click)="selectInstitutes(false)">
+            <img src="assets/arrow-round-black.svg" alt="" />
+          </div>
+          <ion-title>institutes</ion-title>
+        </div>
+      </div>
+      <ion-content>
+        <app-institutes (proccedData)="proceedData()" (retrunData)="returnData()"></app-institutes>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
+<app-submit-button-chip
+  [leftButton]="leftButton"
+  [rightButton]="rightButton"
+  (leftButtonClicked)="return()"
+  (rightButtonClicked)="proceed()"
+>
+</app-submit-button-chip>

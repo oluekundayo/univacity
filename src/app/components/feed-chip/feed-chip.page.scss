@@ -1,0 +1,32 @@
+.fee-row {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+}
+
+.fee-col {
+  display: flex;
+  padding: 8px;
+}
+
+.fee-box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.fee-icon {
+  font-size: 16px;
+  color: black;
+}
+
+.fee-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.fee-details {
+  color: gray;
+  font-size: 14px;
+}

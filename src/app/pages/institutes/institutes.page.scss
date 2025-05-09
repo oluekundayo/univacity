@@ -1,0 +1,97 @@
+.search-container {
+    padding: 1rem;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+.institute-filter {
+  ion-searchbar.custom-searchbar {
+    --background: #f8f8f8;
+    --border-radius: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+.institute-list {
+  list-style: none;
+  padding: 0;
+}
+
+.institute-item {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.institute-item.selected {
+  border: 1px solid #007bff;
+  background-color: #f0f6ff;
+}
+
+.thumbnail img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.institute-info {
+  flex-grow: 1;
+}
+
+.institute-info h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.institute-info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.flag-icon {
+  color: red;
+  margin-right: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.badge {
+  background-color: #eef7ff;
+  color: #184ec9;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.radio {
+  margin-left: auto;
+}
+
+.institute_name {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+
+  h2 {
+    font-size: 16px;
+    color: #5D5D5D;
+    font-weight: 400;
+  }
+}

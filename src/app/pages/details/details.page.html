@@ -1,0 +1,160 @@
+<ion-content [fullscreen]="true">
+  <div class="details">
+    <div class="img_rapper">
+      <ion-img [src]="details?.imageUrl" alt="University Image"> </ion-img>
+      <div class="back" (click)="goBack()">
+        <img src="assets/arrow-round-black.svg" alt="" />
+      </div>
+      <img src="assets/schoolLogo.svg" class="school_logo" alt="" />
+      <div class="info">
+        <div class="info_social">
+          <img src="../../../assets/Heart-black.svg" alt="" class="heart" />
+        </div>
+        <div class="info_social">
+          <img src="assets/ShareNetwork -black.svg" alt="" class="shareNetwork" />
+        </div>
+      </div>
+    </div>
+    <div class="details_content">
+      <h2 class="ion_content_title">{{details?.course}}</h2>
+      <div class="flags">
+        <div class="ion_flags_title">
+          <img src="assets/CircleWavyCheck.svg" alt="" />
+          <span>{{details?.school}}</span>
+        </div>
+        <div class="ion_flags_title">
+          <img src="assets/canada.svg" alt="" />
+          <span>{{details?.country}}</span>
+        </div>
+      </div>
+      <div class="short_des">
+        <p>
+          The master's programme in Environmental Systems Sciences / Climate and
+          Environmental Monitoring at the University of Graz offers a wide
+          spectrum of disciplines, challenging students to develop improved
+          strategies and solutions. This unique programme equips students with
+          the skills to tackle environmental problems effectively.
+        </p>
+      </div>
+      <div class="impressions">
+        <div class="impression_details">
+          <img src="assets/eye.svg" alt="" />
+          <span>191,126 Views</span>
+        </div>
+        <div class="impression_details">
+          <img src="assets/TrendUp.svg" alt="" />
+          <span>293,612 Impression</span>
+        </div>
+      </div>
+      <div class="program">
+        <h4>Program Breakdown</h4>
+        <app-feed-chip [feed]="programFeeds"></app-feed-chip>
+      </div>
+      <!-- Section 1 -->
+      <app-expandable-chip [expandName]="'description'">
+        <p>
+          Studying Environmental Systems Sciences / Climate and Environmental
+          Monitoring at the University of Graz opens up a world of
+          opportunities. By combining various disciplines and developing
+          cross-sectional approaches, students gain a deep understanding of
+          natural sciences and technological aspects. The programme emphasizes
+          the importance of legal aspects in handling chemical compounds,
+          running processes, and plants. Through interactions with diverse
+          research groups and engaging in small research projects, students can
+          tailor their learning experience to suit their interests and career
+          goals. Career Opportunities: Graduates of this program can pursue
+          rewarding careers in environmental consulting, climate change
+          research, renewable energy, sustainability management, and more.
+        </p>
+      </app-expandable-chip>
+      <!-- Section 2 -->
+      <app-expandable-chip [expandName]="'requirement'">
+        <div>
+          <div class="req_list">
+            <img src="../../../assets/Checks.svg" alt="" />
+            <span>Completed relevant degree program</span>
+          </div>
+          <div class="req_list">
+            <img src="../../../assets/Checks.svg" alt="" />
+            <span>Completed relevant degree program</span>
+          </div>
+          <div class="req_list">
+            <img src="../../../assets/Checks.svg" alt="" />
+            <span>Completed relevant degree program</span>
+          </div>
+          <div class="req_list">
+            <img src="../../../assets/Checks.svg" alt="" />
+            <span>Completed relevant degree program</span>
+          </div>
+          <div class="req_list">
+            <img src="../../../assets/Checks.svg" alt="" />
+            <span>Completed relevant degree program</span>
+          </div>
+        </div>
+      </app-expandable-chip>
+      <!-- Section 3 -->
+      <app-expandable-chip [expandName]="'structure'">
+        <p>
+          Studying Environmental Systems Sciences / Climate and Environmental
+          Monitoring at the University of Graz opens up a world of
+          opportunities. By combining various disciplines and developing
+          cross-sectional approaches, students gain a deep understanding of
+          natural sciences and technological aspects. The programme emphasizes
+          the importance of legal aspects in handling chemical compounds,
+          running processes, and plants. Through interactions with diverse
+          research groups and engaging in small research projects, students can
+          tailor their learning experience to suit their interests and career
+          goals. Career Opportunities: Graduates of this program can pursue
+          rewarding careers in environmental consulting, climate change
+          research, renewable energy, sustainability management, and more.
+        </p>
+      </app-expandable-chip>
+
+      <div class="fees">
+        <h4>Fees</h4>
+        <small>
+          Service fee is €50. For international degree students, the tuition fee
+          is € 726,72
+        </small>
+        <app-feed-chip [feed]="feesFeeds"></app-feed-chip>
+      </div>
+
+      <div class="extra_information">
+        <h4>Extra Information</h4>
+        <div class="extra_list">
+          <img src="../../../assets/info-circle.svg" alt="" />
+          <div class="extra_details">
+            <p>
+              Main, Portierloge Wall, Portierloge ReSoWi, Portierloge
+              Hauptgebäude
+            </p>
+            <small>Campuse(s)</small>
+          </div>
+        </div>
+        <div class="extra_list">
+          <img src="../../../assets/info-circle.svg" alt="" />
+          <div class="extra_details">
+            <p>Winter 2024 Intakes</p>
+            <small>Campuse(s)</small>
+          </div>
+        </div>
+        <div class="extra_list">
+          <img src="../../../assets/info-circle.svg" alt="" />
+          <div class="extra_details">
+            <p>English Language</p>
+            <small>Study Language</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-submit-button-chip [leftButton]="leftButton" [rightButton]="rightButton" (leftButtonClicked)="return()" (rightButtonClicked)="proceed()">
+    <div class="footer-header">
+      <img src="assets/schoolLogo.svg" alt="University Logo" class="logo" />
+      <div class="footer-details">
+        <h3>Environmental Systems Sciences / Climate and Environmental Monitoring</h3>
+        <p class="price">€363.36/per semester</p>
+      </div>
+    </div>
+  </app-submit-button-chip>
+</ion-content>

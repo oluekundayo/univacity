@@ -1,0 +1,35 @@
+.btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 17px 0px;
+  border-radius: 32px;
+
+  &.light_blue {
+    background: #d9edff;
+    color: #184ec9;
+  }
+}
+
+.expantion_content {
+  h4 {
+    text-transform: capitalize;
+  }
+  .p_content {
+    color: #666666;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  div.p_content.collapsed {
+    max-height: 100px;
+    overflow: hidden;
+  }
+
+  img.rotated {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+}

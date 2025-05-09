@@ -1,0 +1,26 @@
+<div class="footer">
+  <ng-content></ng-content>
+  <div class="footer-actions">
+    @if (leftButton) {
+    <button class="btn light_blue" (click)="goBack()">
+      @if (leftButton?.position === 'left') {
+      <img [src]="leftButton?.icon" alt="" />
+      }
+      <span>{{leftButton?.name}}</span>
+      @if (leftButton?.position === 'right') {
+      <img [src]="leftButton?.icon" alt="" />
+      }
+    </button>
+    } @if (rightButton) {
+    <button class="btn deep_blue" (click)="procced()">
+      @if (rightButton?.position === 'left') {
+      <img [src]="rightButton?.icon" alt="" />
+      }
+      <span>{{rightButton?.name}}</span>
+      @if (rightButton?.position === 'right') {
+      <img [src]="rightButton?.icon" alt="" />
+      }
+    </button>
+    }
+  </div>
+</div>

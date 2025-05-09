@@ -1,0 +1,113 @@
+.search-result-card {
+  margin-bottom: 16px;
+  border: 1px solid #d1d1d1;
+  padding: 8px;
+  border-radius: 32px;
+  ion-img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    object-fit: cover;
+    height: 200px;
+    position: relative;
+  }
+  ion-img::part(image) {
+    border-radius: 24px;
+  }
+
+  ion-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  ion-card-subtitle {
+    color: var(--ion-color-medium);
+    font-size: 1rem;
+  }
+
+  .card-footer {
+    padding: 0 16px 8px;
+    align-items: center;
+  }
+}
+.img_rapper {
+    position: relative;
+
+    .official {
+        position: absolute;
+        top: 12px;
+        right: 11px;
+        padding: 4px 8px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        background: #FFFFFF;
+        border-radius: 12px;
+        span {
+            font-size: 12px;
+            font-weight: 500;
+            color: #184EC9;
+        }
+    }
+    .school_logo {
+        position: absolute;
+        bottom: 10px;
+        left: 12px;
+        border-radius: 12px;
+    }
+}
+.ion_content_title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.ion_card_title {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 8px;
+
+  span {
+    color: #666666;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+.flags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  .ion_flags_title {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    margin-top: 8px;
+
+    span {
+      color: #666666;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+}
+
+.pricing {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    margin-top: 0px !important;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1e1e1e;
+  }
+
+  .action_img {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+}

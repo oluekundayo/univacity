@@ -1,0 +1,14 @@
+<div class="expantion_content">
+  <h4>{{expandName}}</h4>
+  <div class="p_content" [class.collapsed]="!isExpanded(expandName)">
+    <ng-content> </ng-content>
+  </div>
+  <button class="btn light_blue" (click)="toggleDescription(expandName)">
+    <span>{{ isExpanded(expandName) ? 'Read less' : 'Read more' }}</span>
+    <img
+      src="assets/arrow-down-blue.svg"
+      [class.rotated]="isExpanded(expandName)"
+      alt=""
+    />
+  </button>
+</div>

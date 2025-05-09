@@ -1,0 +1,19 @@
+<div class="toast-container">
+  @for (toast of toasts; track $index) {
+    <div class="toast"
+         [ngClass]="{
+           'bg-success': toast.type === 'success',
+           'bg-error': toast.type === 'error',
+           'bg-info': toast.type === 'info',
+           'bg-warning': toast.type === 'warning'
+         }">
+      
+      <span class="toast-message" [innerHTML]="toast.message"></span>
+      
+      <button (click)="removeToast(toast.id)" class="close-btn">
+        &times;
+      </button>
+    </div>
+  }
+  
+</div>

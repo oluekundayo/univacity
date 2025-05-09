@@ -1,0 +1,103 @@
+<!-- Skeleton Loader (only shown when info is not yet loaded) -->
+<ng-container *ngIf="!data || data.length === 0; else showResults">
+  <ion-card class="search-result-card">
+    <div class="img_rapper">
+      <ion-skeleton-text animated style="width: 100%; height: 180px;"></ion-skeleton-text>
+    </div>
+    <ion-card-content>
+      <ion-skeleton-text animated style="width: 70%; height: 20px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 14px; margin-top: 10px;"></ion-skeleton-text>
+
+      <div class="flags">
+        <ion-skeleton-text animated style="width: 60%; height: 14px; margin-top: 10px;"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%; height: 14px; margin-top: 10px;"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%; height: 14px; margin-top: 10px;"></ion-skeleton-text>
+      </div>
+
+      <div class="pricing">
+        <ion-skeleton-text animated style="width: 40%; height: 20px;"></ion-skeleton-text>
+        <div class="action_img">
+          <ion-skeleton-text animated style="width: 24px; height: 24px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 24px; height: 24px;"></ion-skeleton-text>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card class="search-result-card">
+    <div class="img_rapper">
+      <ion-skeleton-text animated style="width: 100%; height: 180px;"></ion-skeleton-text>
+    </div>
+    <ion-card-content>
+      <ion-skeleton-text animated style="width: 70%; height: 20px;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 50%; height: 14px; margin-top: 10px;"></ion-skeleton-text>
+
+      <div class="flags">
+        <ion-skeleton-text animated style="width: 60%; height: 14px; margin-top: 10px;"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%; height: 14px; margin-top: 10px;"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%; height: 14px; margin-top: 10px;"></ion-skeleton-text>
+      </div>
+
+      <div class="pricing">
+        <ion-skeleton-text animated style="width: 40%; height: 20px;"></ion-skeleton-text>
+        <div class="action_img">
+          <ion-skeleton-text animated style="width: 24px; height: 24px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 24px; height: 24px;"></ion-skeleton-text>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ng-container>
+
+<!-- Actual Content shown after data is available -->
+<ng-template #showResults>
+  @for (item of data; track $index) {
+    <ion-card class="search-result-card" (click)="gotoDetails(item)">
+      <div class="img_rapper">
+        <ion-img [src]="item?.imageUrl" alt="University Image"></ion-img>
+        <div class="official">
+          <img src="assets/CircleWavyCheck.svg" alt="" />
+          <span>Official Partner</span>
+        </div>
+        <img src="assets/schoolLogo.svg" class="school_logo" alt="">
+      </div>
+      <ion-card-content>
+        <h2 class="ion_content_title">{{item?.course}}</h2>
+        <div class="ion_card_title">
+          <img src="assets/CircleWavyCheck.svg" alt="" />
+          <span>{{item?.school}}</span>
+        </div>
+        <div class="flags">
+          <div class="ion_flags_title">
+            <img src="assets/canada.svg" alt="" />
+            <span>{{item?.country}}</span>
+          </div>
+          <div class="ion_flags_title">
+            <img src="assets/GraduationCap.svg" alt="" />
+            <span>{{item?.degree}}</span>
+          </div>
+          <div class="ion_flags_title">
+            <img src="assets/clock.svg" alt="" />
+            <span>{{item?.duration}}</span>
+          </div>
+          <div class="ion_flags_title">
+            <img src="assets/clock.svg" alt="" />
+            <span>{{item?.period}}</span>
+          </div>
+          <div class="ion_flags_title">
+            <img src="assets/Translate.svg" alt="" />
+            <span>{{item?.language}}</span>
+          </div>
+        </div>
+        <div class="pricing">
+          <h2>{{item?.amount}} / per semester</h2>
+          <div class="action_img">
+            <img src="../../../assets/ShareNetwork.svg" alt="" />
+            <img src="../../../assets/Heart.svg" alt="" />
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  }
+</ng-template>
+

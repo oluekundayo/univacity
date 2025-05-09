@@ -1,0 +1,58 @@
+<ion-content [fullscreen]="true">
+  <ion-refresher
+    slot="fixed"
+    (ionRefresh)="doRefresh($event)"
+    pullMin="100"
+    pullMax="200"
+  >
+    <ion-refresher-content
+      pullingIcon="arrow-down-outline"
+      pullingText="Pull to refresh"
+      refreshingSpinner="crescent"
+      refreshingText="Refreshing..."
+    >
+    </ion-refresher-content>
+  </ion-refresher>
+  <div class="dashboard">
+    <app-study-selects
+      [categories]="courseCategories"
+      [selectedCategory]="selectedCourse"
+      [activeFilters]="filterCount"
+      [addBackBtn]="true"
+      (categoryChanged)="onCategoryChange($event)"
+      (sortClicked)="handleSort()"
+      (filterClicked)="handleFilter()"
+      (backClicked)="handleBack($event)"
+    >
+    </app-study-selects>
+
+    <div class="dashboard__body">
+      <div class="chip-container hide-scrollbar">
+        <app-tag-chip
+          *ngFor="let tag of tags; let i = index"
+          [label]="tag"
+          (removed)="removeTag(i)">
+        </app-tag-chip>
+      </div>
+      <div class="dashboard__body__content">
+        <app-item-chip [info]="schoolDetails" (itemClicked)="gotoDetails($event)"></app-item-chip>
+      </div>
+    </div>
+  </div>
+
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <div class="filter">
+        <div class="filter_header">
+          <div class="back" (click)="selectInstitutes(false)">
+            <img src="assets/arrow-black.svg" alt="" />
+          </div>
+          <ion-title>Filter</ion-title>
+        </div>
+      </div>
+      <ion-content>
+        <app-filter (proccedData)="proceedData()" (retrunData)="returnData()"></app-filter>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

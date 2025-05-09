@@ -1,0 +1,19 @@
+.tag-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+  border-radius: 9999px;
+  padding: 8px 18px;
+  margin: 4px;
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-direction: row;
+  gap: 8px;
+
+  span {
+    width: 100%;
+  }
+}

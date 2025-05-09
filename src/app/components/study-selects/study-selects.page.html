@@ -1,0 +1,47 @@
+<div>
+  <div class="db__header">
+    <div>
+      <img src="assets/arrow-black.svg" alt="" />
+    </div>
+    <ion-item lines="none" class="dropdown-select">
+      <ion-label position="stacked">What do you want to study?</ion-label>
+      <img src="assets/arrow-down-black.svg" alt="" class="custom-arrow" />
+      <ion-select
+        [value]="selectedCategory"
+        (ionChange)="onCategoryChange($event.detail.value)"
+        class="custom-select"
+      >
+        <ion-select-option
+          *ngFor="let category of categories"
+          [value]="category"
+        >
+          {{ category }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+
+  <div class="action-buttons">
+    <ion-button fill="clear" size="small" (click)="onSort()" cl>
+      <div class="sort">
+        <img src="../../../assets/sort.svg" alt="" />
+        <span>Sort</span>
+      </div>
+    </ion-button>
+
+    <ion-button
+      fill="clear"
+      size="small"
+      class="filter-button"
+      (click)="onFilter()"
+    >
+      <div class="filter">
+        <img src="../../../assets/filter.svg" alt="" />
+        <span>Filter</span>
+        <ion-badge *ngIf="activeFilters > 0" class="filter-badge">
+          {{ activeFilters }}
+        </ion-badge>
+      </div>
+    </ion-button>
+  </div>
+</div>

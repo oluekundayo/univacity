@@ -1,0 +1,89 @@
+.filter {
+  margin-bottom: 200px;
+  padding: 0px 16px;
+}
+.institutes {
+    padding: 50px 16px 0px 16px;
+  }
+
+.filter_header {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    margin-top: 8px;
+
+    ion-title {
+      color: #666666;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+
+.tuition-fee-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+// .range-box {
+// //   border-top: 1px solid #ddd;
+//   padding-top: 12px;
+// }
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+  padding: 0 10px;
+}
+.adjust_input {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    border:  1px solid #D1D1D1;
+    border-radius: 12px;
+    gap: 13px;
+    padding: 13px 18px;
+    font-size: 16px;
+
+    ion-input {
+        color: #888888;
+    }
+}
+ion-range.custom-range {
+    --bar-background: #f6f6f6 !important;       // Light gray (inactive track)
+    --bar-background-active: #184ec9; // Blue active track
+    --knob-background: #184ec9;      // Blue knobs
+    --pin-background: #184ec9;       // Blue pin
+    --pin-color: #ffffff;            // White text in pin
+  }
+  
+  .range-labels-container {
+    position: relative;
+    margin-top: 8px;
+    height: 20px;
+  }
+  
+  .range-label {
+    position: absolute;
+    transform: translateX(-50%);
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+  }
+  
+  .back {
+    padding: 19px 21px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #ffffff;
+    border-radius: 50%;
+  }

@@ -1,0 +1,51 @@
+<ion-content class="ion-padding institute-filter">
+  <div class="search-container">
+    <input
+      type="text"
+      placeholder="Search institutes"
+      [(ngModel)]="searchTerm"
+      (input)="filterInstitutes()"
+      class="search-input"
+    />
+  </div>
+
+  <ul class="institute-list">
+    <li
+      *ngFor="let institute of filteredInstitutes"
+      [class.selected]="selectedInstitute === institute"
+      (click)="selectedInstitute = institute"
+      class="institute-item"
+    >
+      <div class="thumbnail">
+        <img [src]="institute.logo" alt="logo" />
+      </div>
+
+      <div class="institute-info">
+        <div class="institute_name">
+          <h2>{{ institute.name }}</h2>
+          <div class="badge">{{ institute.count }}</div>
+        </div>
+        <p>
+          <span class="flag-icon">
+            <img [src]="institute.countryLogo" alt="" />
+          </span>
+          {{ institute.country }}
+        </p>
+      </div>
+
+      <input
+        type="radio"
+        name="institute"
+        [checked]="selectedInstitute === institute"
+        class="radio"
+      />
+    </li>
+  </ul>
+</ion-content>
+<app-submit-button-chip
+  [leftButton]="leftButton"
+  [rightButton]="rightButton"
+  (leftButtonClicked)="return()"
+  (rightButtonClicked)="proceed()"
+>
+</app-submit-button-chip>

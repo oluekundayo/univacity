@@ -1,0 +1,160 @@
+.img_rapper {
+  position: relative;
+
+  .back {
+    position: absolute;
+    top: 12px;
+    left: 11px;
+    padding: 19px 21px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #ffffff;
+    border-radius: 50%;
+  }
+  .school_logo {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    border-radius: 12px;
+  }
+}
+.info {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.info_social {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #ffffff;
+    border-radius: 50%;
+
+    .heart {
+        padding: 21px 21px;
+    }
+    .shareNetwork {
+        padding: 19px 21px;
+    }
+}
+.ion_content_title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px !important;
+  padding-top: 10px;
+}
+
+.flags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  .ion_flags_title {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    margin-top: 8px;
+
+    span {
+      color: #666666;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+}
+
+.details {
+  padding: 50px 16px 0px 16px;
+  margin-bottom: 200px;
+}
+
+.short_des {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.impressions {
+  border-top: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+  padding: 16px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .impression_details {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;    
+    align-items: center;
+
+    span {
+      color: #666666;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+}
+
+.req_list {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin-top: 8px;
+  padding: 18px 0px;
+  border-top: 1px solid #d1d1d1;
+
+  span {
+    color: #5d5d5d;
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+
+.extra_list {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin-top: 8px;
+  padding: 18px 0px;
+  border-top: 1px solid #d1d1d1;
+  .extra_details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    p {
+      margin: 0px;
+    }
+  }
+}
+.footer-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.footer-details h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.price {
+  color: #184ec9;
+  font-size: 14px;
+  margin-top: 4px;
+  font-weight: 500;
+}
